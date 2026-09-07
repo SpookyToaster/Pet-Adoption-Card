@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Pet Adoption Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page-shell">
+        <section class="pet-card" aria-labelledby="pet-name">
+            <p class="eyebrow">Find your new best friend</p>
+            <img id="pet-image" src="images/mochi.svg" alt="Mochi, a friendly cat">
+
+            <div class="pet-details">
+                <h1 id="pet-name">Mochi</h1>
+                <p id="pet-description">A curious cat who loves sunny windows and quiet afternoons.</p>
+                <p class="status-label">Adoption status</p>
+                <p id="adoption-status" class="status">Available</p>
+            </div>
+
+            <div class="controls" aria-label="Pet card controls">
+                <button id="next-pet" type="button">Meet Another Pet</button>
+                <button id="favorite-pet" type="button" aria-pressed="false">☆ Favorite</button>
+                <button id="adopt-pet" type="button">Adopt Me</button>
+                <button id="reset-card" class="secondary" type="button">Reset</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

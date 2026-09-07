@@ -1,0 +1,127 @@
+:root {
+    color-scheme: light;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f1eb;
+    color: #263238;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(145deg, #f7efe5, #e5f1ef);
+}
+
+.page-shell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem 1rem;
+}
+
+.pet-card {
+    width: min(100%, 520px);
+    overflow: hidden;
+    border: 1px solid #bdd7d2;
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 18px 50px rgb(38 50 56 / 14%);
+}
+
+.eyebrow {
+    margin: 0;
+    padding: 1rem 1.5rem;
+    background: #155e63;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+#pet-image {
+    display: block;
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    background: #d9efeb;
+}
+
+.pet-details {
+    padding: 1.35rem 1.5rem 0.5rem;
+}
+
+h1 {
+    margin: 0 0 0.4rem;
+    color: #17484b;
+    font-size: 2rem;
+}
+
+#pet-description {
+    min-height: 3rem;
+    margin: 0 0 1.25rem;
+    color: #526269;
+}
+
+.status-label {
+    margin: 0 0 0.25rem;
+    color: #68777d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.status {
+    display: inline-block;
+    margin: 0;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    background: #dff4e4;
+    color: #246536;
+    font-weight: 700;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+button {
+    min-height: 46px;
+    border: 0;
+    border-radius: 12px;
+    padding: 0.75rem 0.9rem;
+    background: #155e63;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+    background: #0d484c;
+}
+
+button.secondary {
+    border: 1px solid #94aaa6;
+    background: #fff;
+    color: #17484b;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+@media (max-width: 480px) {
+    .controls {
+        grid-template-columns: 1fr;
+    }
+}
