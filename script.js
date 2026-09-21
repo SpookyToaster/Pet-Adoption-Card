@@ -48,8 +48,25 @@
 
 
 
+    //<button id="favorite-pet" type="button" aria-pressed="false">☆ Favorite</button>
 
 function toggleFavorite() {
+    // Declare two value states for the fav button. if loop will update state
+    var favoriteButton = document.getElementById("favorite-pet");
+    var isFavorited = favoriteButton.getAttribute("aria-pressed") === "true";
+
+    //need to change the inner text of the button as well to say "'star' Favorited"
+    document.getElementById("favorite-pet").textContent = "☆ Favorited";
+   
+    // IF statement to toggle favorite state
+    if (isFavorited) {
+        favoriteButton.setAttribute("aria-pressed", "false");
+        favoriteButton.textContent = "☆ Favorite";
+    } else {
+        favoriteButton.setAttribute("aria-pressed", "true");
+        favoriteButton.textContent = "★ Favorited";
+    }
+
 }
 
 function adoptPet() {
@@ -65,3 +82,6 @@ function resetCard() {
 
 // changes on click. Goood to go.
 document.getElementById("next-pet").addEventListener("click", showAnotherPet);
+
+// Favorite button click event
+document.getElementById("favorite-pet").addEventListener("click", toggleFavorite);
